@@ -5,7 +5,7 @@ public class Day5 {
     public static void main(String[] args) {
 
     	Scanner input = new Scanner(System.in);
-    	boolean isNice = true;
+    	boolean result = true;
     	int naughtytotal = 0;
     	int nicetotal = 0;
     	int neutral = 0;
@@ -14,11 +14,11 @@ public class Day5 {
 
     	while (!(txt.equals("E"))){
 
-    		if ((isNice = naughty(txt)) == true){
+    		if ((result = naughty(txt)) == true){
     			naughtytotal++;
     		}
     		else{
-    			if ((isNice = nice(txt)) == true){
+    			if ((result = nice(txt)) == true){
     				nicetotal++;
     			}
     			else{
@@ -41,7 +41,8 @@ public class Day5 {
     	boolean check = true;
 
     	for(int i = 0; i< text.length();i++){
-    		if ((text.contains("a")) || (text.contains("e")) || (text.contains("i")) || (text.contains("o")) || (text.contains("u"))){
+    		current = Character.toString(text.charAt(i));
+    		if ((current.equals("a")) || (current.equals("e")) || (current.equals("i")) || (current.equals("o")) || (current.equals("u"))){
     			vowels++;
     		}	
     	}
