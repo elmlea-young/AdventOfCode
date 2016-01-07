@@ -14,6 +14,7 @@ public class Day2 {
 		String present = "start";
 
     	while (!(present.equals("E"))){
+
     		present = input.nextLine();
     		presents.add(present);
 			count++;
