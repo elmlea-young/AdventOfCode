@@ -1,4 +1,4 @@
-igmport java.util.*;
+import java.util.*;
 
 public class Day7 {
 
@@ -6,7 +6,8 @@ public class Day7 {
 
     	String txt= "Start";
     	Scanner input = new Scanner(System.in);
-    	String[][] list = new String[1000][5];
+    	String[] list = new String[1000];
+        int[][] totList = new int[1000][2];
     	int counter = 0;
 
     	while (!(txt.equals("E"))){
@@ -16,15 +17,16 @@ public class Day7 {
 
             if(!(txt.equals("E"))){
                 for (int i = 0; i<temp.length; i++){
-				    list[counter][i] = temp[i];
-                }
-                counter++;
+                    String s = temp[i];
+				    list[counter] = s;
+                    totList[counter][0] = s.length();
+                    counter++;
+                } 
 			}
 
 			for (int i = 0; i < counter; i++){
-				for( int j = 0; j < list[i].length; j++){
-					System.out.println(list[i][j]);
-				}
+				System.out.println(list[i]);
+                System.out.println(totList[i][0]);
 			}
     	}
     }
