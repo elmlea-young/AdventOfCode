@@ -1,4 +1,4 @@
-import java.util.*;
+igmport java.util.*;
 
 public class Day7 {
 
